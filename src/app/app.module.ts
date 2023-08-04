@@ -32,6 +32,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { provideAnimations } from '@angular/platform-browser/animations';
 
 import { provideToastr } from 'ngx-toastr';
+import { PaymentPageComponent } from './payment-page/payment-page.component';
 
 
 
@@ -55,6 +56,7 @@ import { provideToastr } from 'ngx-toastr';
     ProfilePageComponent,
     BackToTopComponent,
     AboutUSComponent,
+    PaymentPageComponent,
   ],
   imports: [
     BrowserModule,

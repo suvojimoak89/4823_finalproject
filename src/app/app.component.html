@@ -58,6 +58,9 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/home/pricing">Pricing</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home/payment">Payment</a>
+        </li>
 
         <ng-container *ngIf="loggedin()">
           <li class="nav-item">
@@ -128,27 +131,25 @@
           </ul>
         </li> -->
 
-        <!-- <button type="button" class="btn btn-primary" routerLink="/login" *ngIf="!loggedin()"> Log in </button> &nbsp;
-        <button type="button" class="btn btn-secondary" routerLink="/signup" *ngIf="!loggedin()"> Sign up </button>&nbsp;
-        <li class="nav-item" *ngIf="loggedin()">
-          <a class="navbar-brand">
-            <img src="assets/img/navprofile.png" alt="">
-          </a> -->
+        
 
-        <button type="button" class="btn btn-primary" routerLink="/login" *ngIf="!loggedin()"> Log in </button> &nbsp;
-        <button type="button" class="btn btn-secondary" routerLink="/signup" *ngIf="!loggedin()"> Sign up </button>&nbsp;
-
+      
+<ng-container *ngIf="!loggedin()">
+        <button type="button" class="btn btn-primary" routerLink="/login" > Log in </button> &nbsp;
+        <button type="button" class="btn btn-secondary" routerLink="/signup" > Sign up </button>&nbsp;
+</ng-container>
+<ng-container *ngIf="loggedin()">
         <div class="dropdown">
           <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             <img src="assets/img/navprofile.png" alt="">
           </button>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu profile">
             <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="#">Another</a></li>
+            <li><a class="dropdown-item" href="#">Somet</a></li>
           </ul>
         </div>
-          
+</ng-container>       
     
 
         

@@ -14,6 +14,7 @@ import { DesignScourseComponent } from './design-scourse/design-scourse.componen
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { AboutUSComponent } from './about-us/about-us.component';
 import { authGuard } from './authentication/auth.guard';
+import { PaymentPageComponent } from './payment-page/payment-page.component';
 
 const routes: Routes = [
 
@@ -44,6 +45,10 @@ const routes: Routes = [
   {path:'profile', component:ProfilePageComponent, canActivate:[authGuard]},
 
   {path:'home/about', component:AboutUSComponent},
+
+  {path:'home/payment', component:PaymentPageComponent},
+
+
 
 
 
