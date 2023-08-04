@@ -1,0 +1,174 @@
+<header>
+  <div *ngIf="showSmartBar" class="smart-bar" id="smartBar">
+    <div class="smart-bar" id="smartBar">
+      <div class="smart-bar__content">
+        <div class="smart-bar__basic-content" data-testid="basic-with-timer">
+          <a data-testid="smart-bar-action-url" routerLink="/pricing">
+            <span data-testid="smart-bar-copy">
+              <span
+                class="smart-bar__title"
+                data-purpose="smart-bar-title"
+                data-testid="smart-bar-title"
+                >Skill up at scale |</span
+              >
+              <span
+                class="smart-bar__subtitle"
+                data-purpose="smart-bar-subtitle"
+                data-testid="smart-bar-subtitle"
+              >
+                Learn why CodeTutor is trusted by 14.4K+ businesses around the
+                world</span
+              >
+            </span>
+          </a>
+          <button
+            class="close-button"
+            aria-label="Close"
+            (click)="closeSmartBar()"
+          >
+            ✕
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/home">
+      <img src="assets/img/uplogo.png" alt="Logo" width="150" height="60" />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav" role="button">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home/courses">Courses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home/pricing">Pricing</a>
+        </li>
+
+        <ng-container *ngIf="loggedin()">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/profile">Profile Page</a>
+          </li>
+        </ng-container>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="resourcesDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            >Resources</a
+          >
+          <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
+            <li><a class="dropdown-item" routerLink="/home/about">About US</a></li>
+            <li><a class="dropdown-item" routerLink="/home/blog">Blog</a></li>
+            <li>
+              <a class="dropdown-item" href="#"> <s>Career Advice</s></a>
+            </li>
+            <li><a class="dropdown-item" routerLink="/home/faqs">FAQs</a></li>
+            <li>
+              <a class="dropdown-item" href="#"> <s>Product Updates</s></a>
+            </li>
+            <!-- <li><a class="dropdown-item" routerLink="/rewards">Rewards</a></li> -->
+          </ul>
+        </li>
+
+        <!-- <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="featuresDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            > <s>Features</s></a
+          >
+          <ul class="dropdown-menu" aria-labelledby="featuresDropdown">
+            <li><a class="dropdown-item" href="#">How it Works</a></li>
+            <li><a class="dropdown-item" href="#">Developer Roadmap</a></li>
+            <li><a class="dropdown-item" href="#">Developer Portfolio</a></li>
+            <li><a class="dropdown-item" href="#">RefactorPro</a></li>
+            <li><a class="dropdown-item" href="#">Customized Lessons</a></li>
+            <li><a class="dropdown-item" href="#">Graded Project</a></li>
+          </ul>
+        </li> -->
+
+
+        <!-- <li>
+          <button type="button" class="btn btn-primary" routerLink="/login" *ngIf="!loggedin()"> Log in </button> &nbsp;
+          <button type="button" class="btn btn-secondary" routerLink="/signup" *ngIf="!loggedin()"> Sign up </button>
+
+        <li class="nav-link dropdown" *ngIf="loggedin()">
+          <a class="nav-link dropdown-toggle dropd" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <span *ngIf="loggedin()" class="user-greeting">
+              <i class="fa-regular fa-user"></i> Hello, {{ f_name }} {{ l_name }}
+            </span>
+          </a>
+          <ul class="dropdown-menu">
+            <li *ngIf="loggedin()">
+              <a class="dropdown-item d-flex align-items-center justify-content-center">
+                <button class="btn btn-outline-danger" (click)="loggingOut()">
+                  <i class="fas fa-sign-out-alt"></i> LogOut </button>
+              </a>
+            </li>
+          </ul>
+        </li> -->
+
+        <!-- <button type="button" class="btn btn-primary" routerLink="/login" *ngIf="!loggedin()"> Log in </button> &nbsp;
+        <button type="button" class="btn btn-secondary" routerLink="/signup" *ngIf="!loggedin()"> Sign up </button>&nbsp;
+        <li class="nav-item" *ngIf="loggedin()">
+          <a class="navbar-brand">
+            <img src="assets/img/navprofile.png" alt="">
+          </a> -->
+
+        <button type="button" class="btn btn-primary" routerLink="/login" *ngIf="!loggedin()"> Log in </button> &nbsp;
+        <button type="button" class="btn btn-secondary" routerLink="/signup" *ngIf="!loggedin()"> Sign up </button>&nbsp;
+
+        <div class="dropdown">
+          <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="assets/img/navprofile.png" alt="">
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+          
+    
+
+        
+
+
+        
+
+
+
+        &nbsp;&nbsp;
+        <!-- add to cart in navbar -->
+        <li class="cart">
+          <i class="fa fa-shopping-cart fa-xl"></i>
+          <span>{{ itemCount }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- cart selector -->
+  <!-- <app-cart [itemCount]="cartItemCount"></app-cart> -->
+</nav>
+
+<router-outlet></router-outlet>
